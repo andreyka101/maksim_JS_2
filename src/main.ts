@@ -38,7 +38,8 @@ console.log("hello TS");
 
 
 // объявление переменной
-let type_num1 = 50
+// let type_num1 = 50
+// let type_num1 = 50 as number
 // объявление пустой переменной
 // let type_num1
 // объявление пустой переменной с типом
@@ -71,7 +72,7 @@ let type_num1 = 50
 // условие
 // let num_if = 2
 // if(num_if < 20){
-    //     console.log("ok");
+//     console.log("ok");
 // }
 
 // иначе
@@ -125,16 +126,96 @@ let type_num1 = 50
 
 
 
-alert("hello")
 // alert("hello")
-// alert("hello")
+// // alert("hello")
+// // alert("hello")
 
-// сообщение prompt возвращает текст или None
-let prom_num = prompt("num ?" , "6")
-console.log(prom_num);
+// // сообщение prompt возвращает текст или None
+// let prom_num = prompt("num ?" , "6")
+// console.log(prom_num);
 
-// сообщение confirm возвращает boolean
-console.log(confirm("да / нет   ?"));
+// // сообщение confirm возвращает boolean
+// console.log(confirm("да / нет   ?"));
+
+
+
+
+// let arr = []
+// let arr = new Array()
+let arr = [1, 2, 3, 4, 5] as Array<number>
+let arr_2 = ["qwew1", "qwew2", "qwew3",] as Array<number | string>
+let arr_3 = ["qwew1", 9, "qwew2", "qwew3", 9] as Array<any>
+
+console.log(arr);
+console.log(arr_2);
+console.log(arr_3);
+
+
+
+// let num5 = 10
+// while (num5 != 20) {
+//     console.log(num5);
+//     num5 += 1
+//     num5++
+// }
+
+
+// let num5 = 20
+// while(num5 < 20){
+//     console.log(num5);
+//     num5+=1
+// }
+// do{
+//     console.log(num5);
+//     num5+=1
+// }while(num5 < 20)
+
+
+
+// for (let i = 0; i != 10; i++) {
+//     console.log(i);
+// }
+
+
+// let num_i = 3
+// for (; num_i < 30; num_i *= 2) {
+//     console.log(num_i);
+// }
+
+
+// let num_i = 3
+// for (; num_i < 30;) {
+//     console.log(num_i);
+//     num_i *= 2
+// }
+
+
+
+// let num_a = 4
+// let num_b = 8
+// let num_a: number = 4, num_b = 8
+
+
+
+
+// for (let a = 0, b=20; a!=b;a++ , b--) {
+//     console.log(a,b);
+// }
+
+
+
+
+// console.log(typeof fun1);
+// console.log(fun1);
+console.log(fun1(true , 4));
+
+
+function fun1(a:any, b:number, s ="text"){
+    console.log("hi fun1");
+    console.log(a,b,s);
+    return  (a + b) as number
+    return  (a + b) as void
+}
 
 
 
