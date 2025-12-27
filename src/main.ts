@@ -207,16 +207,103 @@ console.log(arr_3);
 
 // console.log(typeof fun1);
 // console.log(fun1);
-console.log(fun1(true , 4));
+// console.log(fun1(true , 4));
 
 
-function fun1(a:any, b:number, s ="text"){
+function fun1(a: any, b: number, s = "text") {
     console.log("hi fun1");
-    console.log(a,b,s);
-    return  (a + b) as number
-    return  (a + b) as void
+    console.log(a, b, s);
+    return (a + b) as number
+    return (a + b) as void
 }
 
+
+
+// let num_f:any = 4
+// console.log(num_f);
+
+// num_f = function(){
+//     console.log("hi");
+//     console.log("text");
+// }
+// num_f()
+
+
+
+let num_f2 = () => alert("2334")
+
+// num_f2()
+
+
+let num_f3 = (a: any) => {
+    a += "text"
+    console.log(a);
+}
+num_f3(0);
+
+
+(() => {
+    console.log("none fun");
+})()
+
+
+
+
+
+// const span1 = document.querySelector("span") as HTMLElement
+const span1 = document.querySelector("span") as HTMLSpanElement
+console.log(span1);
+span1.innerText = 'text'
+span1.innerText = '<div>text D</div>'
+span1.innerHTML = '<div>text D</div>'
+// span1.innerHTML = 'text'
+
+
+
+const span2 = document.querySelector(".span_box") as HTMLSpanElement
+span2.innerText = 'text box'
+span2.style.backgroundColor = "#FF9E9EFF"
+
+
+
+
+
+const button1 = document.querySelector("button") as HTMLButtonElement
+// function funClick(){
+//     alert("text")
+// }
+// button1.addEventListener("click",funClick)
+
+
+// button1.addEventListener("click",()=>{
+//     span1.innerText = 'text'
+// })
+
+
+
+
+
+
+
+
+
+// const num_s=1
+// let num_s=1;
+// // var
+// (() => {
+//     num_s = 5
+//     console.log("num_s fun" , num_s);
+// })()
+// console.log("num_s" , num_s);
+
+
+
+
+// (() => {
+//     let num_s = 5
+//     console.log("num_s fun" , num_s);
+// })()
+// console.log("num_s" , num_s);
 
 
 

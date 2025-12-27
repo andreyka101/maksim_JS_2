@@ -1,3 +1,17 @@
-body{
+body {
   background-color: blueviolet;
+}
+
+span {
+  font-size: 20px;
+  background-color: blanchedalmond;
+  padding: 20px;
+  display: inline-block;
+}
+
+div {
+  display: inline-block;
+  background-color: brown;
+  color: rgb(242, 242, 242);
+  padding: 10px;
 }
