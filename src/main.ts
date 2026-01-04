@@ -126,25 +126,29 @@ console.log("hello TS");
 
 
 
+// alert сообщение на сайте
 // alert("hello")
-// // alert("hello")
-// // alert("hello")
+// alert("hello")
+// alert("hello")
 
-// // сообщение prompt возвращает текст или None
+// сообщение prompt возвращает текст или None
 // let prom_num = prompt("num ?" , "6")
 // console.log(prom_num);
 
-// // сообщение confirm возвращает boolean
+// сообщение confirm возвращает boolean
 // console.log(confirm("да / нет   ?"));
 
 
 
-
+// создание пустого массива
 // let arr = []
 // let arr = new Array()
+// создание массива чисел
 let arr = [1, 2, 3, 4, 5] as Array<number>
-let arr_2 = ["qwew1", "qwew2", "qwew3",] as Array<number | string>
-let arr_3 = ["qwew1", 9, "qwew2", "qwew3", 9] as Array<any>
+// создание массива чисел и строк
+let arr_2 = ["qwew1", 9, "qwew2", "qwew3", 9,] as Array<number | string>
+// создание массива любого типа
+let arr_3 = ["qwew1", 9, true] as Array<any>
 
 console.log(arr);
 console.log(arr_2);
@@ -152,6 +156,7 @@ console.log(arr_3);
 
 
 
+// цикл while 
 // let num5 = 10
 // while (num5 != 20) {
 //     console.log(num5);
@@ -160,6 +165,7 @@ console.log(arr_3);
 // }
 
 
+// цикл do while - делает минимум один оборот цикла , даже если в условии false
 // let num5 = 20
 // while(num5 < 20){
 //     console.log(num5);
@@ -172,32 +178,28 @@ console.log(arr_3);
 
 
 
+// for(начало; условие; шаг)
 // for (let i = 0; i != 10; i++) {
 //     console.log(i);
 // }
 
-
+// необязательно писать в цикле for начало и шаг
 // let num_i = 3
 // for (; num_i < 30; num_i *= 2) {
 //     console.log(num_i);
 // }
 
-
+// необязательно писать в цикле for начало и шаг
 // let num_i = 3
 // for (; num_i < 30;) {
 //     console.log(num_i);
 //     num_i *= 2
 // }
 
-
-
+// цикл for может работать с несколькими переменными
 // let num_a = 4
 // let num_b = 8
 // let num_a: number = 4, num_b = 8
-
-
-
-
 // for (let a = 0, b=20; a!=b;a++ , b--) {
 //     console.log(a,b);
 // }
@@ -205,11 +207,11 @@ console.log(arr_3);
 
 
 
+// вызов функции
 // console.log(typeof fun1);
 // console.log(fun1);
 // console.log(fun1(true , 4));
-
-
+// создание функции
 function fun1(a: any, b: number, s = "text") {
     console.log("hi fun1");
     console.log(a, b, s);
@@ -218,23 +220,22 @@ function fun1(a: any, b: number, s = "text") {
 }
 
 
-
-// let num_f:any = 4
+// создание функции и перезапись переменной
+let num_f:any = 4
 // console.log(num_f);
-
-// num_f = function(){
-//     console.log("hi");
-//     console.log("text");
-// }
+num_f = function(){
+    console.log("hi");
+    console.log("text");
+}
 // num_f()
 
 
-
+// создание стрелочной функции с одной строкой
 let num_f2 = () => alert("2334")
-
 // num_f2()
 
 
+// создание стрелочной функции с несколькими строками строкой
 let num_f3 = (a: any) => {
     a += "text"
     console.log(a);
@@ -242,6 +243,7 @@ let num_f3 = (a: any) => {
 num_f3(0);
 
 
+// создание и запуск функции без сохранения
 (() => {
     console.log("none fun");
 })()
@@ -249,35 +251,38 @@ num_f3(0);
 
 
 
-
+// с помошью document.querySelector достаём элемент HTML по (тегу, классу, ID)
 // const span1 = document.querySelector("span") as HTMLElement
 const span1 = document.querySelector("span") as HTMLSpanElement
 console.log(span1);
+// innerText - вставляет текст в элемент HTML
 span1.innerText = 'text'
 span1.innerText = '<div>text D</div>'
+// innerText - вставляет HTML в элемент HTML
+span1.innerHTML = 'text'
 span1.innerHTML = '<div>text D</div>'
-// span1.innerHTML = 'text'
 
 
-
+// с помошью document.querySelector достаём элемент HTML по (тегу, классу, ID)
 const span2 = document.querySelector(".span_box") as HTMLSpanElement
 span2.innerText = 'text box'
+// через .style в элементе можно поменять стили
 span2.style.backgroundColor = "#FF9E9EFF"
 
 
-
-
-
+// с помошью document.querySelector достаём элемент HTML по (тегу, классу, ID)
 const button1 = document.querySelector("button") as HTMLButtonElement
-// function funClick(){
-//     alert("text")
-// }
-// button1.addEventListener("click",funClick)
-
-
-// button1.addEventListener("click",()=>{
-//     span1.innerText = 'text'
-// })
+function funClick(){
+    alert("text")
+}
+// addEventListener(опция , функция) - обработка событий мышки над элементом
+// вызываем функцию funClick при нажатии на элемент button1
+button1.addEventListener("click",funClick)
+// 
+// вызываем стрелочную функцию при нажатии на элемент button1
+button1.addEventListener("click",()=>{
+    span1.innerText = 'text'
+})
 
 
 
