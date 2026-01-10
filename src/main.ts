@@ -1,4 +1,4 @@
-// import './style.css'
+import './style.scss'
 
 
 
@@ -268,6 +268,7 @@ const span2 = document.querySelector(".span_box") as HTMLSpanElement
 span2.innerText = 'text box'
 // через .style в элементе можно поменять стили
 span2.style.backgroundColor = "#FF9E9EFF"
+span2.style.padding = "40px 10px"
 
 
 // с помошью document.querySelector достаём элемент HTML по (тегу, классу, ID)
@@ -277,12 +278,14 @@ function funClick(){
 }
 // addEventListener(опция , функция) - обработка событий мышки над элементом
 // вызываем функцию funClick при нажатии на элемент button1
-button1.addEventListener("click",funClick)
+// button1.addEventListener("click",funClick)
 // 
 // вызываем стрелочную функцию при нажатии на элемент button1
-button1.addEventListener("click",()=>{
-    span1.innerText = 'text'
-})
+// button1.addEventListener("click",()=>{
+//     span1.innerText = 'text'
+// })
+
+
 
 
 
@@ -294,7 +297,6 @@ button1.addEventListener("click",()=>{
 
 // const num_s=1
 // let num_s=1;
-// // var
 // (() => {
 //     num_s = 5
 //     console.log("num_s fun" , num_s);
@@ -304,11 +306,29 @@ button1.addEventListener("click",()=>{
 
 
 
-// (() => {
+// if(true){
 //     let num_s = 5
 //     console.log("num_s fun" , num_s);
-// })()
+// }
 // console.log("num_s" , num_s);
+
+
+
+if(true){
+    var num_s2 = 20
+    console.log("num_s2 fun" , num_s2);
+}
+console.log("num_s2" , num_s2);
+
+
+
+
+const el_but = document.querySelector("#but") as HTMLDivElement
+el_but.addEventListener("click",function(){
+    el_but.style.bottom = "0%"
+    el_but.style.left = "34%"
+})
+
 
 
 
