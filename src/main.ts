@@ -1,3 +1,4 @@
+//* подключаем стили через ts
 import './style.scss'
 
 
@@ -17,7 +18,7 @@ console.log("hello TS");
 // string
 // console.log(typeof("344"));
 // boolean
-// console.log(typeof(true));
+// console.log(typeof(true)); 
 // function
 // console.log(typeof(alert));
 // object
