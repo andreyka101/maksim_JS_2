@@ -127,12 +127,14 @@ console.log("hello TS");
 
 
 
+// !
 // alert сообщение на сайте
 // alert("hello")
 // alert("hello")
 // alert("hello")
 
 // сообщение prompt возвращает текст или None
+// let prom_num = prompt("num ?")
 // let prom_num = prompt("num ?" , "6")
 // console.log(prom_num);
 
@@ -222,9 +224,9 @@ function fun1(a: any, b: number, s = "text") {
 
 
 // создание функции и перезапись переменной
-let num_f:any = 4
+let num_f: any = 4
 // console.log(num_f);
-num_f = function(){
+num_f = function () {
     console.log("hi");
     console.log("text");
 }
@@ -274,7 +276,7 @@ span2.style.padding = "40px 10px"
 
 // с помошью document.querySelector достаём элемент HTML по (тегу, классу, ID)
 const button1 = document.querySelector("button") as HTMLButtonElement
-function funClick(){
+function funClick() {
     alert("text")
 }
 // addEventListener(опция , функция) - обработка событий мышки над элементом
@@ -316,20 +318,101 @@ function funClick(){
 
 
 // Изменяемая переменная var созданная внутри условия или цикла остаётся после окончания
-if(true){
+if (true) {
     var num_s2 = 20
-    console.log("num_s2 fun" , num_s2);
+    console.log("num_s2 fun", num_s2);
 }
-console.log("num_s2" , num_s2);
+console.log("num_s2", num_s2);
 
 
 
 
 const el_but = document.querySelector("#but") as HTMLDivElement
-el_but.addEventListener("click",function(){
+el_but.addEventListener("click", function () {
     el_but.style.bottom = "0%"
     el_but.style.left = "34%"
 })
+
+
+
+// ! +("5")
+console.log(+("5") + 5);
+
+
+
+let arr2 = [1, 2, 3, 4, 5, 6] as Array<number | string>
+// let arr3 = [
+// [1,2,3],
+// [4,5,6],
+// [7,8,9],
+// ]
+console.log(arr2);
+
+arr2.push(99)
+console.log(arr2);
+
+arr2.pop()
+console.log(arr2);
+
+arr2.shift()
+console.log(arr2);
+
+arr2.unshift(88)
+console.log(arr2);
+
+arr2.splice(3, 1)
+// arr2.splice(3,2)
+// arr2.splice(3)
+console.log(arr2);
+
+// arr2.splice(2,0 , "a","b")
+// arr2.splice(2,2 , "a","b")
+// arr2.splice(2,4 , "a","b")
+console.log(arr2);
+
+arr2.splice(-3)
+console.log(arr2);
+
+// console.log(arr2.concat([11,22]))
+// arr2 = arr2.concat([11,22])
+// arr2 = arr2.concat(11,22)
+arr2 = arr2.concat([11, 22], [33, 44])
+console.log(arr2);
+
+
+// arr2.forEach((item , index, array)=>{
+//     console.log(item , index, array);
+// })
+
+
+// arr2.forEach((item) => {
+//     console.log(item);
+// })
+
+
+// function arrfun(item: any, index: number, array: Array) {
+//     console.log(item, index, array);
+// }
+// arr2.forEach(arrfun)
+
+
+
+let arr3 = []
+arr3 = arr2.filter()
+
+
+
+
+
+
+// console.log(arr2.slice(2, 4))
+// console.log(arr2.slice())
+
+
+// console.log(arr2.indexOf(1))
+// arr2.unshift(NaN)
+// console.log(arr2.indexOf(NaN))
+
 
 
 
