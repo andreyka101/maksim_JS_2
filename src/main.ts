@@ -335,17 +335,19 @@ el_but.addEventListener("click", function () {
 
 
 
-// ! +("5")
+// ! +("5") - Преобразуем строку в число
 console.log(+("5") + 5);
 
 
 
+// создание массив чисел и строк
 let arr2 = [1, 2, 3, 4, 5, 6] as Array<number | string>
-// let arr3 = [
+// создаем массив с массивами
+// let arrx2 = [
 // [1,2,3],
 // [4,5,6],
 // [7,8,9],
-// ]
+// ] as Array<Array<number>>
 console.log(arr2);
 
 arr2.push(99)
