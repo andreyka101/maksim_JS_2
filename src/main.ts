@@ -238,7 +238,7 @@ let num_f2 = () => alert("2334")
 // num_f2()
 
 
-// создание стрелочной функции с несколькими строками строкой
+// создание стрелочной функции с несколькими строками строками
 let num_f3 = (a: any) => {
     a += "text"
     console.log(a);
@@ -350,23 +350,27 @@ let arr2 = [1, 2, 3, 4, 5, 6] as Array<number | string>
 // ] as Array<Array<number>>
 console.log(arr2);
 
+// добавляет элементы в конец
 arr2.push(99)
 console.log(arr2);
 
+// извлекает элемент из конца
 arr2.pop()
 console.log(arr2);
 
+// извлекает элемент из начала
 arr2.shift()
 console.log(arr2);
 
+// добавляет элементы в начало
 arr2.unshift(88)
 console.log(arr2);
 
-arr2.splice(3, 1)
-// arr2.splice(3,2)
-// arr2.splice(3)
+arr2.splice(3, 1) // начиная с индекса 3, удалит 1 элемент
+arr2.splice(3) // удалит всё начиная с индекса 3
 console.log(arr2);
 
+// после удаления вставляем в конец элементы
 // arr2.splice(2,0 , "a","b")
 // arr2.splice(2,2 , "a","b")
 // arr2.splice(2,4 , "a","b")
@@ -375,29 +379,42 @@ console.log(arr2);
 arr2.splice(-3)
 console.log(arr2);
 
+// создаём новый массив, в котором копирует данные из других массивов
 // console.log(arr2.concat([11,22]))
 // arr2 = arr2.concat([11,22])
 // arr2 = arr2.concat(11,22)
 arr2 = arr2.concat([11, 22], [33, 44])
 console.log(arr2);
 
-
+// запускам функцию для каждого элемента массива
 // arr2.forEach((item , index, array)=>{
 //     console.log(item , index, array);
 // })
-
-
 // arr2.forEach((item) => {
 //     console.log(item);
 // })
-
-
 // function arrfun(item: any, index: number, array: Array) {
 //     console.log(item, index, array);
 // }
 // arr2.forEach(arrfun)
 
 
+
+let arr3 = []
+arr3 = arr2.filter()
+
+
+
+
+
+
+// console.log(arr2.slice(2, 4))
+// console.log(arr2.slice())
+
+
+// console.log(arr2.indexOf(1))
+// arr2.unshift(NaN)
+// console.log(arr2.indexOf(NaN))
 
 
 
