@@ -400,21 +400,9 @@ console.log(arr2);
 
 
 
-let arr3 = []
-arr3 = arr2.filter()
 
 
 
-
-
-
-// console.log(arr2.slice(2, 4))
-// console.log(arr2.slice())
-
-
-// console.log(arr2.indexOf(1))
-// arr2.unshift(NaN)
-// console.log(arr2.indexOf(NaN))
 
 
 
