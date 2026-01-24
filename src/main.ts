@@ -350,6 +350,9 @@ let arr2 = [1, 2, 3, 4, 5, 6] as Array<number | string>
 // ] as Array<Array<number>>
 console.log(arr2);
 
+// !
+//! console.log(arr2.length);
+
 // добавляет элементы в конец
 arr2.push(99)
 console.log(arr2);
@@ -376,15 +379,15 @@ console.log(arr2);
 // arr2.splice(2,4 , "a","b")
 console.log(arr2);
 
-arr2.splice(-3)
-console.log(arr2);
+// arr2.splice(-3)
+// console.log(arr2);
 
 // создаём новый массив, в котором копирует данные из других массивов
 // console.log(arr2.concat([11,22]))
 // arr2 = arr2.concat([11,22])
 // arr2 = arr2.concat(11,22)
 arr2 = arr2.concat([11, 22], [33, 44])
-console.log(arr2);
+// console.log(arr2);
 
 // запускам функцию для каждого элемента массива
 // arr2.forEach((item , index, array)=>{
@@ -400,10 +403,69 @@ console.log(arr2);
 
 
 
+// console.log(arr2.includes(11))
+// console.log(arr2.includes(12))
+
+
+
+arr2 = arr2.concat([11, 9])
+console.log(arr2);
+
+
+// console.log(arr2.indexOf(11))
+// console.log(arr2.indexOf(12))
+
+
+
+// console.log(arr2.lastIndexOf(11))
+
+
+
+// console.log(arr2.find((item) => item == 11))
+// console.log(arr2.find((item , index) => index == 7 || index == 5))
+
+
+// console.log(arr2.findIndex((index) => index == 2))
 
 
 
 
+// console.log(arr2.filter((item , ) => item == 11))
+// console.log(arr2.filter((item ,index ) => index == 7 || index == 5 || item == 2))
+
+
+
+let arr2num = arr2 as Array<number>
+console.log(arr2num.map((item: number) => item + 10))
+// console.log(arr2num.map(() => 0))
+console.log(arr2num.map((item: number, index: number) => {
+    let x = item * index
+
+    return x
+}))
+
+
+
+arr2num.sort()
+console.log(arr2num);
+
+
+
+let arr2str = ["h", "a", "fbg", "g", "wd", "errgt", "u",] 
+arr2str.sort()
+console.log(arr2str);
+
+
+
+// @ts-ignore
+arr2num.sort((a:any , b:any)=>{
+    if(a > b){
+        return 1
+    }
+    if(a == b)return 0
+    if(a < b)return -1
+})
+console.log(arr2num);
 
 
 
