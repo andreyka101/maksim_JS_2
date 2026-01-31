@@ -409,7 +409,7 @@ arr2 = arr2.concat([11, 22], [33, 44])
 
 
 arr2 = arr2.concat([11, 9])
-console.log(arr2);
+// console.log(arr2);
 
 
 // console.log(arr2.indexOf(11))
@@ -436,36 +436,145 @@ console.log(arr2);
 
 
 let arr2num = arr2 as Array<number>
-console.log(arr2num.map((item: number) => item + 10))
-// console.log(arr2num.map(() => 0))
-console.log(arr2num.map((item: number, index: number) => {
-    let x = item * index
+// console.log(arr2num.map((item: number) => item + 10))
+// // console.log(arr2num.map(() => 0))
+// console.log(arr2num.map((item: number, index: number) => {
+//     let x = item * index
 
-    return x
-}))
+//     return x
+// }))
 
 
 
 arr2num.sort()
-console.log(arr2num);
+// console.log(arr2num);
 
 
 
-let arr2str = ["h", "a", "fbg", "g", "wd", "errgt", "u",] 
+let arr2str = ["h", "a", "fbg", "g", "wd", "errgt", "u",]
 arr2str.sort()
-console.log(arr2str);
+// console.log(arr2str);
 
 
 
 // @ts-ignore
-arr2num.sort((a:any , b:any)=>{
-    if(a > b){
+arr2num.sort((a: any, b: any) => {
+    if (a > b) {
         return 1
     }
-    if(a == b)return 0
-    if(a < b)return -1
+    if (a == b) return 0
+    if (a < b) return -1
 })
+// console.log(arr2num);
+
+
+
 console.log(arr2num);
+console.log(arr2num.reverse());
+
+
+
+let arrstr = ["ws", "555", 'moremofer']
+console.log(arrstr.join('-*-'));
+console.log(arrstr.join('^'));
+
+
+
+
+
+
+
+
+
+let str1 = "qwertyutyui"
+str1 = 'qwertyut'
+str1 = '<div id="but">ot\n click</div>'
+str1 = `<div id="but">
+click
+</div>`
+str1 = '12qREDwe15Rtyut'
+console.log(str1);
+
+console.log(str1.indexOf('red'));
+console.log(str1.indexOf('RED'));
+
+
+
+console.log(str1.toLowerCase());
+console.log(str1.toUpperCase());
+
+
+
+console.log(str1[3])
+console.log(str1[3].toLowerCase())
+
+
+
+// console.log(str1.slice(3))
+console.log(str1.slice(3, 6))
+
+
+
+// console.log(str1.includes("rerre"));
+// console.log(str1.includes("RED"));
+// console.log(str1.includes("RED" , 4));
+
+
+
+// console.log(str1.split('R'))
+// console.log(str1.split('R'))
+// console.log(str1.split('R' , 2))
+// console.log(str1.split('R' , 4))
+
+
+let str2 = 'wwee' + '3334' + str1 as any
+
+console.log(str2);
+
+
+str2 = '' + 45
+console.log(str2);
+console.log(typeof (str2));
+
+
+str2 = Boolean(45)
+console.log(str2);
+console.log(typeof (str2));
+
+
+
+
+
+
+
+
+
+let arr_HTML = [
+    `
+<span class="el_list">
+  list text 1
+</span>
+    `,
+    `
+<span class="el_list">
+  list text 2
+</span>
+    `,
+    `
+<span class="el_list">
+  list text 3
+</span>
+    `,
+] as Array<String>
+const div_list = document.querySelector('.list') as HTMLDivElement
+div_list.innerHTML = ""
+arr_HTML.forEach((item) => {
+    div_list.innerHTML += item
+})
+
+
+
+
 
 
 
